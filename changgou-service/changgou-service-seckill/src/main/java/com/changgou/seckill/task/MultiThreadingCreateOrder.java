@@ -37,6 +37,7 @@ public class MultiThreadingCreateOrder {
             String userId = seckillStatus.getUsername();
             Object goodsId = redisTemplate.boundListOps("SeckillGoodsCountList_" + seckillId).rightPop();
             if (goodsId == null) {
+                //顶顶顶顶顶顶顶顶顶顶顶
                 //删除用户的订单状态
                 redisTemplate.boundHashOps("UserQueueStatus").delete(userId);
                 //删除用户的下单次数
