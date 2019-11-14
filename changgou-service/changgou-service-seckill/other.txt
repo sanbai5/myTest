@@ -1,0 +1,8 @@
+1、redis中所存数据：
+    a：秒杀商品列表（hash结构）："SeckillGoods_"+time（例如：SeckillGoods_2019101514）
+    b：用户秒杀商品详情（hash结构）："SeckillOrder"（其中fild为用户ID）
+    c：下单用户信息（List结构放在队列中）："SeckillOrderQueue"
+    d：用户抢单状态（hash结构）："UserQueueStatus"
+    e：用户下单次数（hash结构）："UserQueryCount"+seckillId
+    f：商品id的数组队列（list结构长度为数组的长度）："SeckillGoodsCountList_"+seckillId
+    g：秒杀商品的库存数（hash结构）："SeckillGoodsCount"
